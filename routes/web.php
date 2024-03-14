@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\MahasiswaController;
+
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+Route::post('/tambah-mahasiswa', [MahasiswaController::class, 'mengirim']);
 
 Route::get('/', function () {
     return view('welcome');
